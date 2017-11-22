@@ -3,7 +3,7 @@
   <thead>All Songs</thead>
   <tbody>
     <% @songs.each do |song| %>
-      <tr><%= link_to song.title, song_path(song) %></tr>
+      <p><%= link_to song.title, song_path(song) %></p>
     <% end %>
   </tbody>
 </table>
