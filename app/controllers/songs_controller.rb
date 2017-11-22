@@ -36,7 +36,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require[:song].permit(*args) # if something breaks it is probably because of this... because i guessed and I'm not that good!
+    params.require[:song].permit(:title, :released, :release_year, :artist_name, :genre) # if something breaks it is probably because of this... because i guessed and I'm not that good!
   end
 
 end
