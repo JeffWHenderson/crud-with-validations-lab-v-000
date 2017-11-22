@@ -36,7 +36,7 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    redirect_to song_path(@song)
+    redirect_to :index
   end
 
   private
