@@ -4,6 +4,7 @@ class Song < ActiveRecord::Base
   validates :released, inclusion: { in: [ true, false ] }
   # is invalid when the release year is in the future (FAILED - 16)
   validates :release_year, presence: true, if: :released
+  validates :release_year, numericality: { less_than_or_equal_to: Date.today.year}, if: :released
   # is invalid without release year when released is true (FAILED - 15)
       # Optional if released is false
       # Must not be blank if released is true
