@@ -36,7 +36,7 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    redirect_to :index_url
+    redirect_to 'index_url'
   end
 
   private
