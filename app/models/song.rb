@@ -8,5 +8,4 @@ class Song < ActiveRecord::Base
       # Must not be blank if released is true
       # Must be less than or equal to the current year
   validates :artist_name, presence: true
-
 end
