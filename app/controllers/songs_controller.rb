@@ -28,5 +28,10 @@ class SongsController < ApplicationController
 
   end
 
+  private
+
+  def song_params(*args)
+    params.require[:song].permit(*args) # if something breaks it is probably because of this... because i guessed and I'm not that good!
+  end
 
 end
